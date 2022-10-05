@@ -1,0 +1,62 @@
+.commercial-ar {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    background-image: url('../../../images/com-bg.jpg');
+    background-position-y: 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    // start heading
+    svg {
+      z-index: 1;
+    }
+    svg text {
+        user-select: none;
+        letter-spacing: 10px;
+        stroke: var(--main-color);
+        font-size: 8rem;
+        font-weight: 700;
+        stroke-width: 3;
+        animation: textAnimate 5s infinite alternate;
+        @media screen and (max-width: 768px) {
+          font-size: 3rem;
+          stroke-width: 1;
+        }
+      }
+      @keyframes textAnimate {
+        0% {
+          stroke-dasharray: 0 50%;
+          stroke-dashoffset:  20%;
+          fill: var(--light);
+        }
+        100% {
+          stroke-dasharray: 50% 0;
+          stroke-dashoffstet: -20%;
+          fill: hsla(189, 68%, 75%,0%)
+        }
+      }
+    // end heading
+    // start gallery
+    .swiper {
+        width: 30%;
+        height: 30%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+    // end gallery
+}

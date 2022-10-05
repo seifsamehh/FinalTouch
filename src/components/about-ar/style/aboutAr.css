@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;400;600;800&display=swap");
+.about-ar-page {
+  font-family: "Noto Sans Arabic", sans-serif;
+  height: 100%;
+  text-align: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../images/about-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .about-ar-page {
+    padding: 7rem 0;
+  }
+}
+.about-ar-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .about-ar-page .row {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+}
+.about-ar-page .about-content {
+  z-index: 1;
+}
+.about-ar-page .about-content h1 {
+  position: relative;
+  overflow: hidden;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 3rem;
+  margin-left: 33rem;
+  color: var(--light);
+}
+@media screen and (max-width: 768px) {
+  .about-ar-page .about-content h1 {
+    margin-left: 10rem;
+    margin-right: 1rem;
+  }
+}
+.about-ar-page .about-content h1::after {
+  content: "";
+  background: rgba(252, 235, 19, 0.25);
+  position: absolute;
+  left: 17px;
+  bottom: -17px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  z-index: -1;
+  transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+}
+.about-ar-page .about-content h1:hover:after {
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 100%;
+}
+.about-ar-page .about-content p {
+  font-size: 1.2rem;
+  text-align: end;
+  line-height: 1.7;
+}
+@media screen and (max-width: 768px) {
+  .about-ar-page .about-content p {
+    font-size: 1rem;
+  }
+}
+.about-ar-page .about-content p span {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 768px) {
+  .about-ar-page .about-content p span {
+    font-size: 1.2rem;
+  }
+}
+.about-ar-page .about-img {
+  z-index: 1;
+}
+.about-ar-page .about-img img {
+  width: 70%;
+}/*# sourceMappingURL=aboutAr.css.map */

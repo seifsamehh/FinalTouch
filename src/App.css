@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+:root {
+  --light: #fff;
+  --dark: #1c1f22;
+  --main-color: #fceb13;
+  --text: #2B3044;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif !important;
+  overflow-x: hidden;
+  background-color: var(--dark) !important;
+  color: var(--light) !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.offline {
+  min-height: 100vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  background-color: var(--dark);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.offline h1 {
+  font-size: 150px;
+  color: var(--text);
+  transform: translateY(-600px);
+  -webkit-animation: 1.2s slideIn ease-in-out forwards 1s;
+          animation: 1.2s slideIn ease-in-out forwards 1s;
+  z-index: 10;
+  opacity: 0;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .offline h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+.offline h1::before {
+  content: "";
+  width: 0%;
+  height: 76px;
+  background-color: var(--light);
+  position: absolute;
+  bottom: -10px;
+  -webkit-animation: 1s underline ease-in-out forwards 2s;
+          animation: 1s underline ease-in-out forwards 2s;
+  mix-blend-mode: screen;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .offline h1::before {
+    height: 76px;
+    bottom: -10px;
+    left: 0;
+  }
+}
+.offline .overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--main-color);
+  transform: scale(0.5);
+  -webkit-animation: 0.5s slideIn ease-in-out forwards, 1s skewBg ease-in-out;
+          animation: 0.5s slideIn ease-in-out forwards, 1s skewBg ease-in-out;
+}
+@-webkit-keyframes skewBg {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes skewBg {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes underline {
+  100% {
+    width: 100%;
+  }
+}
+@keyframes underline {
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes slideIn {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.qlONe {
+  height: 200vh !important;
+}
+
+section {
+  width: 100vw;
+  padding: 50px 0;
+}
+
+a {
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+::-moz-selection {
+  background-color: var(--main-color);
+  color: var(--light);
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: var(--light);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+
+.btn-shine {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 48px;
+  color: var(--light);
+  background: linear-gradient(to right, #4d4d4d 0, var(--light) 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 3s infinite linear;
+          animation: shine 3s infinite linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 5rem;
+  font-family: "Caveat", cursive;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-shine {
+    font-size: 2.7rem !important;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 300px;
+  }
+  100% {
+    background-position: 300px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 300px;
+  }
+  100% {
+    background-position: 300px;
+  }
+}
+.offcanvas {
+  background-color: var(--main-color) !important;
+  height: 40% !important;
+}
+
+.offcanvas-body {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow-y: hidden !important;
+}
+
+.offcanvas-body nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.offcanvas-body nav a {
+  color: var(--light);
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.offcanvas-body nav .underline {
+  position: relative;
+}
+
+.offcanvas-body nav .underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--light);
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .offcanvas-body nav .underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}/*# sourceMappingURL=App.css.map */

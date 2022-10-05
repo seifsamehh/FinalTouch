@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+header {
+  background-color: #212427;
+  padding: 1rem;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+}
+header .container .row {
+  align-items: center;
+}
+header .container .row .logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+header .container .row .logo img {
+  width: 30%;
+}
+@media screen and (max-width: 768px) {
+  header .container .row .logo img {
+    width: 100%;
+  }
+}
+header .container .row .logo h5 {
+  font-family: "Caveat", cursive;
+}
+header .container .row .pages {
+  display: flex;
+  justify-content: end;
+}
+@media screen and (max-width: 768px) {
+  header .container .row .pages {
+    display: none;
+  }
+}
+header .container .row .pages a {
+  color: var(--light);
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin: 0 1.3rem;
+}
+header .container .row .pages .underline {
+  position: relative;
+}
+header .container .row .pages .underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+@media (hover: hover) and (pointer: fine) {
+  header .container .row .pages .underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+header .container .row .overlay {
+  display: flex;
+  justify-content: end;
+  overflow-y: hidden;
+}
+@media (min-width: 769px) {
+  header .container .row .overlay {
+    display: none;
+  }
+}
+header .container .row .overlay svg {
+  cursor: pointer;
+}/*# sourceMappingURL=header.css.map */

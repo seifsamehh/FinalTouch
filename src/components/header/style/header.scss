@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+header {
+    background-color: #212427;
+    padding: 1rem;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    .container {
+        .row {
+            align-items: center;
+            .logo {
+                user-select: none;
+                img {
+                    width: 30%;
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                    }
+                }
+                h5 {
+                    font-family: 'Caveat', cursive;
+                }
+            }
+            .pages {
+                display: flex;
+                justify-content: end;
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+                a {
+                    color: var(--light);
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    margin: 0 1.3rem;
+                }
+                .underline{
+                    position: relative;
+                  }
+                  .underline::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: var(--main-color);
+                    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+                  }
+                  @media (hover: hover) and (pointer: fine) {
+                    .underline:hover::before{
+                      left: 0;
+                      right: auto;
+                      width: 100%;
+                    }
+                  }
+            }
+            .overlay {
+                display: flex;
+                justify-content: end;
+                overflow-y: hidden;
+                @media (min-width: 769px) {
+                    display: none;
+                }
+                svg {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
